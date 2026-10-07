@@ -1,0 +1,513 @@
+{
+  "project": "CyberSentinel",
+  "description": "Phishing URL Detection System using Machine Learning",
+  "generated_at": "2026-10-06 23:28:50",
+  "dataset": {
+    "source": "UCI Machine Learning Repository (ID 327)",
+    "name": "Phishing Websites Dataset",
+    "total_samples": 11055,
+    "training_samples": 8844,
+    "testing_samples": 2211,
+    "legitimate_samples": 6157,
+    "phishing_samples": 4898,
+    "total_features": 30,
+    "all_features": [
+      "having_ip_address",
+      "url_length",
+      "shortining_service",
+      "having_at_symbol",
+      "double_slash_redirecting",
+      "prefix_suffix",
+      "having_sub_domain",
+      "sslfinal_state",
+      "domain_registration_length",
+      "favicon",
+      "port",
+      "https_token",
+      "request_url",
+      "url_of_anchor",
+      "links_in_tags",
+      "sfh",
+      "submitting_to_email",
+      "abnormal_url",
+      "redirect",
+      "on_mouseover",
+      "rightclick",
+      "popupwindow",
+      "iframe",
+      "age_of_domain",
+      "dnsrecord",
+      "web_traffic",
+      "page_rank",
+      "google_index",
+      "links_pointing_to_page",
+      "statistical_report"
+    ],
+    "url_extractable_features": [
+      "having_ip_address",
+      "url_length",
+      "shortining_service",
+      "having_at_symbol",
+      "double_slash_redirecting",
+      "prefix_suffix",
+      "having_sub_domain",
+      "port",
+      "https_token",
+      "abnormal_url"
+    ]
+  },
+  "benchmark_30_features": {
+    "decision_tree": {
+      "model_name": "Decision Tree (30 Features)",
+      "accuracy": 0.9711,
+      "precision": 0.9711,
+      "recall": 0.9711,
+      "f1_score": 0.971,
+      "phishing_class": {
+        "precision": 0.9722,
+        "recall": 0.9622,
+        "f1": 0.9672
+      },
+      "legitimate_class": {
+        "precision": 0.9702,
+        "recall": 0.9781,
+        "f1": 0.9741
+      },
+      "confusion_matrix": {
+        "raw": [
+          [
+            943,
+            37
+          ],
+          [
+            27,
+            1204
+          ]
+        ],
+        "labels": [
+          "Phishing (-1)",
+          "Legitimate (+1)"
+        ],
+        "true_phishing": 943,
+        "false_legitimate": 37,
+        "false_phishing": 27,
+        "true_legitimate": 1204
+      }
+    },
+    "random_forest": {
+      "model_name": "Random Forest (30 Features)",
+      "accuracy": 0.9742,
+      "precision": 0.9743,
+      "recall": 0.9742,
+      "f1_score": 0.9742,
+      "phishing_class": {
+        "precision": 0.9802,
+        "recall": 0.9612,
+        "f1": 0.9706
+      },
+      "legitimate_class": {
+        "precision": 0.9696,
+        "recall": 0.9846,
+        "f1": 0.977
+      },
+      "confusion_matrix": {
+        "raw": [
+          [
+            942,
+            38
+          ],
+          [
+            19,
+            1212
+          ]
+        ],
+        "labels": [
+          "Phishing (-1)",
+          "Legitimate (+1)"
+        ],
+        "true_phishing": 942,
+        "false_legitimate": 38,
+        "false_phishing": 19,
+        "true_legitimate": 1212
+      }
+    },
+    "random_forest_importance": [
+      {
+        "feature": "sslfinal_state",
+        "importance": 0.3197
+      },
+      {
+        "feature": "url_of_anchor",
+        "importance": 0.25
+      },
+      {
+        "feature": "web_traffic",
+        "importance": 0.0708
+      },
+      {
+        "feature": "having_sub_domain",
+        "importance": 0.0695
+      },
+      {
+        "feature": "links_in_tags",
+        "importance": 0.0439
+      },
+      {
+        "feature": "prefix_suffix",
+        "importance": 0.0379
+      },
+      {
+        "feature": "sfh",
+        "importance": 0.0202
+      },
+      {
+        "feature": "links_pointing_to_page",
+        "importance": 0.0193
+      },
+      {
+        "feature": "request_url",
+        "importance": 0.0177
+      },
+      {
+        "feature": "domain_registration_length",
+        "importance": 0.0167
+      },
+      {
+        "feature": "age_of_domain",
+        "importance": 0.0165
+      },
+      {
+        "feature": "google_index",
+        "importance": 0.0131
+      },
+      {
+        "feature": "having_ip_address",
+        "importance": 0.0129
+      },
+      {
+        "feature": "dnsrecord",
+        "importance": 0.0128
+      },
+      {
+        "feature": "page_rank",
+        "importance": 0.012
+      },
+      {
+        "feature": "url_length",
+        "importance": 0.0082
+      },
+      {
+        "feature": "https_token",
+        "importance": 0.0065
+      },
+      {
+        "feature": "redirect",
+        "importance": 0.0057
+      },
+      {
+        "feature": "submitting_to_email",
+        "importance": 0.0055
+      },
+      {
+        "feature": "having_at_symbol",
+        "importance": 0.0054
+      },
+      {
+        "feature": "statistical_report",
+        "importance": 0.0051
+      },
+      {
+        "feature": "shortining_service",
+        "importance": 0.0049
+      },
+      {
+        "feature": "popupwindow",
+        "importance": 0.0046
+      },
+      {
+        "feature": "favicon",
+        "importance": 0.0042
+      },
+      {
+        "feature": "abnormal_url",
+        "importance": 0.0041
+      },
+      {
+        "feature": "double_slash_redirecting",
+        "importance": 0.0037
+      },
+      {
+        "feature": "on_mouseover",
+        "importance": 0.0032
+      },
+      {
+        "feature": "port",
+        "importance": 0.0023
+      },
+      {
+        "feature": "iframe",
+        "importance": 0.0023
+      },
+      {
+        "feature": "rightclick",
+        "importance": 0.0012
+      }
+    ],
+    "decision_tree_importance": [
+      {
+        "feature": "sslfinal_state",
+        "importance": 0.6222
+      },
+      {
+        "feature": "url_of_anchor",
+        "importance": 0.1126
+      },
+      {
+        "feature": "links_in_tags",
+        "importance": 0.0368
+      },
+      {
+        "feature": "having_sub_domain",
+        "importance": 0.0347
+      },
+      {
+        "feature": "web_traffic",
+        "importance": 0.0261
+      },
+      {
+        "feature": "domain_registration_length",
+        "importance": 0.0195
+      },
+      {
+        "feature": "links_pointing_to_page",
+        "importance": 0.018
+      },
+      {
+        "feature": "prefix_suffix",
+        "importance": 0.0177
+      },
+      {
+        "feature": "request_url",
+        "importance": 0.013
+      },
+      {
+        "feature": "age_of_domain",
+        "importance": 0.012
+      },
+      {
+        "feature": "page_rank",
+        "importance": 0.0101
+      },
+      {
+        "feature": "google_index",
+        "importance": 0.01
+      },
+      {
+        "feature": "sfh",
+        "importance": 0.0091
+      },
+      {
+        "feature": "url_length",
+        "importance": 0.0075
+      },
+      {
+        "feature": "having_ip_address",
+        "importance": 0.0072
+      },
+      {
+        "feature": "dnsrecord",
+        "importance": 0.0071
+      },
+      {
+        "feature": "submitting_to_email",
+        "importance": 0.0045
+      },
+      {
+        "feature": "redirect",
+        "importance": 0.0043
+      },
+      {
+        "feature": "statistical_report",
+        "importance": 0.0039
+      },
+      {
+        "feature": "https_token",
+        "importance": 0.0034
+      },
+      {
+        "feature": "popupwindow",
+        "importance": 0.0032
+      },
+      {
+        "feature": "having_at_symbol",
+        "importance": 0.003
+      },
+      {
+        "feature": "favicon",
+        "importance": 0.003
+      },
+      {
+        "feature": "rightclick",
+        "importance": 0.0024
+      },
+      {
+        "feature": "on_mouseover",
+        "importance": 0.0022
+      },
+      {
+        "feature": "shortining_service",
+        "importance": 0.002
+      },
+      {
+        "feature": "abnormal_url",
+        "importance": 0.0019
+      },
+      {
+        "feature": "iframe",
+        "importance": 0.0014
+      },
+      {
+        "feature": "double_slash_redirecting",
+        "importance": 0.0007
+      },
+      {
+        "feature": "port",
+        "importance": 0.0005
+      }
+    ],
+    "preferred_model": "Random Forest",
+    "rationale": "Random Forest achieves higher accuracy (97.42%), superior precision (97.43%), and better generalization via ensemble bagging, reducing overfitting seen in individual decision trees."
+  },
+  "realtime_url_model": {
+    "features_used": [
+      "having_ip_address",
+      "url_length",
+      "shortining_service",
+      "having_at_symbol",
+      "double_slash_redirecting",
+      "prefix_suffix",
+      "having_sub_domain",
+      "port",
+      "https_token",
+      "abnormal_url"
+    ],
+    "decision_tree": {
+      "model_name": "Decision Tree (URL Only)",
+      "accuracy": 0.749,
+      "precision": 0.7694,
+      "recall": 0.749,
+      "f1_score": 0.7489,
+      "phishing_class": {
+        "precision": 0.6718,
+        "recall": 0.848,
+        "f1": 0.7497
+      },
+      "legitimate_class": {
+        "precision": 0.847,
+        "recall": 0.6702,
+        "f1": 0.7483
+      },
+      "confusion_matrix": {
+        "raw": [
+          [
+            831,
+            149
+          ],
+          [
+            406,
+            825
+          ]
+        ],
+        "labels": [
+          "Phishing (-1)",
+          "Legitimate (+1)"
+        ],
+        "true_phishing": 831,
+        "false_legitimate": 149,
+        "false_phishing": 406,
+        "true_legitimate": 825
+      }
+    },
+    "random_forest": {
+      "model_name": "Random Forest (URL Only)",
+      "accuracy": 0.7481,
+      "precision": 0.766,
+      "recall": 0.7481,
+      "f1_score": 0.7482,
+      "phishing_class": {
+        "precision": 0.6735,
+        "recall": 0.8378,
+        "f1": 0.7467
+      },
+      "legitimate_class": {
+        "precision": 0.8397,
+        "recall": 0.6767,
+        "f1": 0.7494
+      },
+      "confusion_matrix": {
+        "raw": [
+          [
+            821,
+            159
+          ],
+          [
+            398,
+            833
+          ]
+        ],
+        "labels": [
+          "Phishing (-1)",
+          "Legitimate (+1)"
+        ],
+        "true_phishing": 821,
+        "false_legitimate": 159,
+        "false_phishing": 398,
+        "true_legitimate": 833
+      }
+    },
+    "feature_importance": [
+      {
+        "feature": "having_sub_domain",
+        "importance": 0.407
+      },
+      {
+        "feature": "prefix_suffix",
+        "importance": 0.2998
+      },
+      {
+        "feature": "url_length",
+        "importance": 0.0549
+      },
+      {
+        "feature": "having_ip_address",
+        "importance": 0.0486
+      },
+      {
+        "feature": "port",
+        "importance": 0.0482
+      },
+      {
+        "feature": "abnormal_url",
+        "importance": 0.0311
+      },
+      {
+        "feature": "having_at_symbol",
+        "importance": 0.0298
+      },
+      {
+        "feature": "double_slash_redirecting",
+        "importance": 0.0294
+      },
+      {
+        "feature": "shortining_service",
+        "importance": 0.0287
+      },
+      {
+        "feature": "https_token",
+        "importance": 0.0225
+      }
+    ],
+    "preferred_model": "Random Forest",
+    "honesty_note": "Trained exclusively on the 10 static URL features available without making live network requests or inspecting web page bodies. Achieves ~75% accuracy using static lexical structure alone."
+  }
+}
