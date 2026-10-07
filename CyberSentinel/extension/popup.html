@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CyberSentinel Phishing Shield</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="header">
+    <div class="logo">🛡️ CyberSentinel</div>
+    <div class="tag">AI Shield</div>
+  </div>
+
+  <div class="url-box">
+    <div class="label">CURRENT TAB URL:</div>
+    <div id="urlDisplay" class="url-text">Loading active tab...</div>
+  </div>
+
+  <div id="verdictBox" class="verdict-box safe">
+    <div id="verdictText" class="verdict-title">Analyzing...</div>
+    <div id="riskScoreText" class="risk-score">Calculating risk score</div>
+  </div>
+
+  <div class="flags-section">
+    <div class="section-title">Detected Signals:</div>
+    <ul id="flagsList" class="flags-list">
+      <li>Inspecting static structure...</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <a href="http://localhost:8501" target="_blank" class="full-dash-btn">Open Full CyberSentinel Dashboard ↗</a>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

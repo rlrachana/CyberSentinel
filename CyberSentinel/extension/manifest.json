@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "CyberSentinel - Phishing URL Shield",
+  "version": "1.0.0",
+  "description": "Real-time AI and heuristic URL phishing scanner protecting your browsing.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "CyberSentinel URL Scanner"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ]
+}

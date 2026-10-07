@@ -1,0 +1,137 @@
+body {
+  width: 320px;
+  margin: 0;
+  padding: 14px;
+  background-color: #0f172a;
+  color: #f8fafc;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #1e293b;
+  padding-bottom: 10px;
+  margin-bottom: 12px;
+}
+
+.logo {
+  font-size: 16px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #38bdf8, #818cf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tag {
+  font-size: 10px;
+  background: #1e293b;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+
+.url-box {
+  background: #1e293b;
+  border-radius: 6px;
+  padding: 8px 10px;
+  margin-bottom: 12px;
+}
+
+.label {
+  font-size: 9px;
+  color: #64748b;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 3px;
+}
+
+.url-text {
+  font-size: 11px;
+  color: #cbd5e1;
+  word-break: break-all;
+  font-family: monospace;
+  max-height: 40px;
+  overflow-y: auto;
+}
+
+.verdict-box {
+  text-align: center;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  border: 1px solid transparent;
+}
+
+.verdict-box.safe {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.4);
+  color: #34d399;
+}
+
+.verdict-box.suspicious {
+  background: rgba(245, 158, 11, 0.15);
+  border-color: rgba(245, 158, 11, 0.4);
+  color: #fbbf24;
+}
+
+.verdict-box.phishing {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: rgba(239, 68, 68, 0.4);
+  color: #f87171;
+}
+
+.verdict-title {
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.risk-score {
+  font-size: 12px;
+  margin-top: 4px;
+  opacity: 0.9;
+}
+
+.flags-section {
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: #94a3b8;
+  margin-bottom: 6px;
+}
+
+.flags-list {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 11px;
+  color: #cbd5e1;
+  line-height: 1.4;
+}
+
+.flags-list li {
+  margin-bottom: 4px;
+}
+
+.footer {
+  text-align: center;
+  border-top: 1px solid #1e293b;
+  padding-top: 10px;
+}
+
+.full-dash-btn {
+  display: block;
+  background: #38bdf8;
+  color: #0f172a;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
